@@ -1,0 +1,253 @@
+*{
+    background-color: lightpink;
+    margin: 0;
+}
+
+body{
+    height: 100vh;
+    margin: 0;    
+} 
+
+.title-container{
+    /* align horizontally */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align vertically */
+    align-items: center;
+    height: 80vh;
+    
+}
+
+.title-container p {
+    margin-bottom: 10px; /* Adjust this value to control the space between the message and the title */
+    font-size: 18px; /* Adjust the font size as needed */
+    color: rgb(202, 12, 155); /* Match the color with the title or choose a different color */
+}
+
+.title{    
+    font-size: 37px;
+    color: white;    
+    text-align: center;/* makes sure text is centered in the container */
+    background-color: rgb(235, 53, 189); /* Add a background color */
+    display: inline-block; /* Make the background fit the text */
+    padding: 10px 20px; /* Add some padding around the text */
+    border-radius: 5px; /*round the corners */
+    /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);  add a shadow */
+    border: none; /* Remove default button border */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+@keyframes pop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.title:hover {
+    animation: pop 3s;
+    background-color: rgb(255, 73, 209); /* Lighter background on hover */
+    transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+/* dude */
+.gif1-pic {
+    position: absolute; /*allows to precisely input the coordinates of pic */
+    /* coordinates of pic */
+    top: 70px;
+    left: 90px;
+    width: 270px; /* Adjust this value to increase or decrease the width of pic*/
+    height: auto; /* maintains the aspect ratio */
+    opacity: 0.9; /* Adjust this value to control transparency */
+    border-radius: 10px; /* Rounds the corners of the pic */
+
+    border: 3px rgb(235, 53, 189); /* Add a border around the pic */
+    filter: drop-shadow(0 0 27px rgba(243, 15, 186, 0.473)) contrast(120%);/* creates a shadow effect */
+   
+}
+
+/* minions */
+.gif2-pic {
+    position: absolute; /*allows to precisely input the coordinates of pic */
+    /* coordinates of pic */
+    top: 366px;
+    left: 498px;
+    width: 390px; /* Adjust this value to increase or decrease the width of pic*/
+    height: auto; /* maintains the aspect ratio */
+    opacity: 0.9; /*Adjust this value to control transparency */
+    border-radius: 10px; /* Rounds the corners of the pic */
+
+    border: 3px rgb(235, 53, 189); /* Add a border around the pic */
+    filter: drop-shadow(0 0 19px rgba(243, 15, 186, 0.473)) contrast(120%);/* creates a shadow effect */
+  
+}
+
+/* lady */
+.gif3-pic {
+    position: absolute; /*allows to precisely input the coordinates of pic */
+    /* coordinates of pic */
+    top: 50px;
+    right: 90px;
+    width: 260px; /* Adjust this value to increase or decrease the width of pic*/
+    height: auto; /* maintains the aspect ratio */
+    opacity: 0.9;/*  Adjust this value to control transparency */
+    border-radius: 10px; /* Rounds the corners of the pic */
+
+    
+    border: 3px rgb(235, 53, 189); /* Add a border around the pic */
+    filter: drop-shadow(0 0 19px rgba(243, 15, 186, 0.473)) contrast(120%);/* creates a shadow effect */
+    
+}
+
+.gif-pic:hover{
+    cursor: pointer;
+    animation: pop 3s ;
+    transition: all 0.7s ease-in-out;
+}
+
+.gif-container {
+    /*allows to place other items without disrupting the position of the gif1-pic */
+    position: relative;
+}
+
+#blue-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: lightblue;
+    z-index: 9999;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#blue-screen h2 {
+    background-color: lightblue;
+    color: white;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#blue-screen button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: white;
+    color: blue;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.hidden {
+    display: none;
+}
+
+#blue-screen.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.blue-screen-button-container {
+    background-color: lightblue;    
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Adds space between the buttons */
+}
+
+.blue-screen-button-container button {
+    background-color: lightblue;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#blue-screen button {
+    color: magenta;
+}
+#blue-screen button:hover {
+    background-color: lightpink;
+    color: rgb(119, 173, 255);
+}
+
+.gif4-pic {
+    position: absolute; /*allows to precisely input the coordinates of pic */
+    /* coordinates of pic */
+    top: 60px;
+    left: 570px;
+    width: 220px; /* Adjust this value to increase or decrease the width of pic*/
+    height: auto; /* maintains the aspect ratio */
+    opacity: 0.9; /* Adjust this value to control transparency */
+    border-radius: 10px; /* Rounds the corners of the pic */
+
+    /*border: 3px rgb(235, 53, 189); /* Add a border around the pic */
+    filter: drop-shadow(0 0 27px rgba(243, 15, 186, 0.473)) contrast(120%);/* creates a shadow effect */
+   
+}
+
+#green-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: lightpink;
+    z-index: 10000;    
+    display: flex;
+    flex-direction: column;    
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    pointer-events: none;
+}
+
+.gif5-pic {
+    margin-top: 20px; /* Adjust this value to control spacing between text and gif */
+    width: 200px; /* Adjust size as needed */
+    height: auto;
+}
+
+#green-screen.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#green-screen h2 {    
+    color: rgb(83, 123, 255);
+    font-size: 29px;
+}
+
+#red-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: lightpink;
+    z-index: 10000;    
+    display: flex;
+    flex-direction: column;    
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    pointer-events: none;
+}
+
+#red-screen.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#red-screen h2 {    
+    color: rgb(83, 123, 255);
+    font-size: 29px;
+}
